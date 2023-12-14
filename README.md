@@ -1,4 +1,4 @@
-![Progress](/src/images/logoprogress.png)
+![Progress](/src/images/logolight.png)
 
 ## The productivity app for teachers
 
