@@ -1,8 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Hexagon } from "@phosphor-icons/react";
 
 const Signup = () => {
+  const navigate = useNavigate();
   return (
     <section class="">
       <div class=" items-center px-5 py-12 lg:px-20">
@@ -83,6 +84,7 @@ const Signup = () => {
                   <button
                     type="submit"
                     class="flex items-center justify-center w-full px-10 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-blue-600 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                    onClick={() => navigate("/onboard")}
                   >
                     Create account
                   </button>
