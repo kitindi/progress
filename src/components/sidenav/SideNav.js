@@ -7,6 +7,7 @@ import {
   ChartBarHorizontal,
   CalendarBlank,
   SignOut,
+  Notebook,
 } from "@phosphor-icons/react";
 
 const SideNav = () => {
@@ -45,7 +46,7 @@ const SideNav = () => {
         </Link>
         <Link to="" className="flex gap-3 items-center">
           <span>
-            <CalendarBlank size={24} />
+            <Notebook size={24} color="#1a1919" />
           </span>
           Lesson plan
         </Link>
