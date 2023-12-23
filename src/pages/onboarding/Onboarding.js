@@ -4,12 +4,11 @@ import SideNav from "../../components/sidenav/SideNav";
 import { Camera } from "@phosphor-icons/react";
 
 const Onboarding = () => {
+  const navigate = useNavigate();
 
-  const navigate = useNavigate()
-
-  const  handleProfile =()=>{
-  navigate("/dashboard")
-  }
+  const handleProfile = () => {
+    navigate("/dashboard");
+  };
   return (
     <section className="w-full h-full">
       <Navbar />
@@ -25,15 +24,18 @@ const Onboarding = () => {
             <h3 className="text-lg text-slate-700 text-center font-medium">
               Set up your profile
             </h3>
-            <div className="w-full flex justify-center py-4">
-              <div
-                className="w-16 h-16 rounded-full border-2 border-dotted border-slate-950 bg-white flex items-center justify-center cursor-pointer"
-                title="add your profile"
-              >
-                <Camera size={18} color="#1a1919" />
-              </div>
-            </div>
+
             <form action="">
+              <div className="w-full flex justify-center py-4">
+                <label
+                  htmlFor="file"
+                  className="w-16 h-16 rounded-full border-2 border-dotted border-slate-950 bg-white flex items-center justify-center cursor-pointer"
+                  title="add your profile"
+                >
+                  <Camera size={18} color="#1a1919" />
+                </label>
+                <input type="file" name="" id="" className="hidden" />
+              </div>
               <div className="grid grid-cols-12 gap-8">
                 <div className="col-span-6 p-4 flex flex-col gap-3">
                   <label
@@ -105,7 +107,10 @@ const Onboarding = () => {
                 </div>
               </div>
               <div className="p-4">
-                <button className="flex items-center justify-center w-full px-10 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none" onClick ={handleProfile}>
+                <button
+                  className="flex items-center justify-center w-full px-10 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none"
+                  onClick={handleProfile}
+                >
                   {" "}
                   Continue
                 </button>

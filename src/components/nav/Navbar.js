@@ -1,4 +1,5 @@
 import React from "react";
+import user from "../../images/user.svg";
 
 const Navbar = () => {
   return (
@@ -21,7 +22,13 @@ const Navbar = () => {
             />
           </svg>
         </div>
-        <div className="col-span-10  px-10"></div>
+        <div className="col-span-10  px-10 flex justify-between items-center pl-20 pr-10 pt-5">
+          <p>Subject</p>
+          <div className="flex items-center gap-8">
+            <p>Username</p>{" "}
+            <img className="h-10 w-10 rounded-full" src={user} alt="" />
+          </div>
+        </div>
       </div>
     </nav>
   );

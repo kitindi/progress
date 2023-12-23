@@ -12,7 +12,7 @@ import {
 
 const SideNav = () => {
   return (
-    <div className="col-span-2  px-10 border-r-2 border-gray-300 flex flex-col justify-between gap-16">
+    <div className="col-span-2  px-10 border-r-2 border-gray-200 flex flex-col justify-between gap-16 h-[35rem]">
       <ul className="mt-20 flex flex-col gap-6">
         <Link to="" className="flex gap-3 items-center">
           <span>
