@@ -18,7 +18,7 @@ const Auth = () => {
 
   return (
     <section className="">
-      <div className=" items-center px-5 py-12 lg:px-20">
+      <div className=" items-center px-5 py-12 sm:px-20">
         <div className="flex flex-col w-full max-w-lg px-10 mx-auto my-6 transition duration-500 ease-in-out transform bg-white rounded-lg md:mt-0">
           <div className="sm:mx-auto sm:w-full sm:max-w-2xl text-center">
             <h1 className="my-4 text-4xl font-semibold  text-neutral-600 flex items-center gap-2 text-center justify-center">
@@ -28,7 +28,7 @@ const Auth = () => {
           <div className="">
             {/* start here */}
 
-            <div className="mt-4 bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-gray-800 dark:border-gray-700 w-full">
+            <div className="my-4 bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-gray-800 dark:border-gray-700 w-full">
               <div className="p-4 sm:p-7">
                 <div className="text-center">
                   <h1 className="block text-2xl font-bold text-gray-800 dark:text-white">
@@ -36,12 +36,12 @@ const Auth = () => {
                   </h1>
                   <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
                     Don't have an account yet?
-                    <a
+                    <Link
+                      to="/signup"
                       className="text-blue-600 decoration-2 hover:underline font-medium dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                      href="../examples/html/signup.html"
                     >
                       Sign up here
-                    </a>
+                    </Link>
                   </p>
                 </div>
 

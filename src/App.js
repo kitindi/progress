@@ -12,7 +12,7 @@ import Planner from "./pages/planner/Planner";
 
 function App() {
   return (
-    <main className="w-full">
+    <main className="w-full bg-gray-100">
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />

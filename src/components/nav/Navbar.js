@@ -4,7 +4,7 @@ import user from "../../images/user.svg";
 const Navbar = () => {
   return (
     <nav className="w-full  border-b border-gray-200">
-      <div className="max-w-7xl mx-auto h-30 grid grid-cols-12 ">
+      <div className="max-w-8xl mx-auto h-30 grid grid-cols-12 ">
         <div className="col-span-2  px-10  pt-10 pb-4">
           <svg
             className="h-8"
@@ -22,7 +22,7 @@ const Navbar = () => {
             />
           </svg>
         </div>
-        <div className="col-span-10  px-10 flex justify-between items-center pl-20 pr-10 pt-5">
+        <div className="col-span-10  pl-10 pr-20 flex justify-between items-center  pt-5">
           <p>Subject</p>
           <div className="flex items-center gap-8">
             <p>Username</p>{" "}

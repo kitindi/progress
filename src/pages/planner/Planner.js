@@ -1,109 +1,128 @@
 import React from "react";
 import Navbar from "../../components/nav/Navbar";
 import SideNav from "../../components/sidenav/SideNav";
-import { FadersHorizontal } from "@phosphor-icons/react";
-import { Barchart } from "../../components/charts/Barchart";
 
 const Planner = () => {
   return (
-    <section className="w-full h-full">
+    <section className="w-full h-full bg-gray-100">
       <Navbar />
-      <div className="max-w-7xl mx-auto  grid grid-cols-12 ">
+      <div className="max-w-8xl mx-auto  grid grid-cols-12 ">
         <SideNav />
         <div className="col-span-10 px-20">
-          <div className="grid grid-cols-12 gap-4 py-4">
-            <div className="bg-blue-300 opacity-80 col-span-4 p-4 flex items-center gap-10 rounded-sm">
-              <div>
-                <p className="text-base mb-3">Total students</p>
-                <p className="text-sm font-medium">Year : 2023/2024</p>
+          {/* start here */}
+          {/* <!-- Card Section --> */}
+          <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-10 mx-auto">
+            {/* <!-- Grid --> */}
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+              {/* <!-- Card --> */}
+              <div class="flex flex-col bg-white border shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-800">
+                <div class="p-4 md:p-5 flex justify-between gap-x-3">
+                  <div>
+                    <p class="text-xs uppercase tracking-wide text-gray-500">
+                      Total Students
+                    </p>
+                    <div class="mt-1 flex items-center gap-x-2 pt-2">
+                      <h3 class="text-lg sm:text-lg font-medium text-gray-800 dark:text-gray-200">
+                        47
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="flex-shrink-0 flex justify-center items-center w-[46px] h-[46px] bg-blue-600 text-white rounded-full dark:bg-blue-900 dark:text-blue-200">
+                    <svg
+                      class="flex-shrink-0 w-5 h-5"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                      <circle cx="9" cy="7" r="4" />
+                      <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                  </div>
+                </div>
               </div>
-              <p className="text-3xl font-semibold">46</p>
-            </div>
-            <div className="bg-blue-300 opacity-80 col-span-4 px-8 py-4 flex items-center gap-5 rounded-sm">
-              <p className="text-base">Lessons:</p>{" "}
-              <p className="text-3xl font-semibold">10</p>
-            </div>
-            <div className="bg-blue-300 opacity-80 col-span-4 px-8 py-4 flex items-center gap-5 rounded-sm">
-              <p className="text-base">Class:</p>{" "}
-              <p className="text-2xl font-medium">Form 4A</p>
-            </div>
-          </div>
-          <div className="grid grid-cols-12  bg-blue-300 opacity-80 rounded-sm py-3 gap-2">
-            <div className=" col-span-3 p-2 flex items-center">
-              <select
-                name=""
-                id=""
-                className="w-full py-2 text-sm focus:outline-none"
-              >
-                <option value="">Select class</option>
-                <option value="Form 4A">Form 4A</option>
-                <option value="Form 4B">Form 4B</option>
-                <option value="Form 4C">Form 4C</option>
-                <option value="Form 3A">Form 3A</option>
-                <option value="Form 3B">Form 3B</option>
-                <option value="Form 3C">Form 3C</option>
-              </select>
-            </div>
+              {/* <!-- End Card --> */}
 
-            <div className=" col-span-3 p-2 flex items-center">
-              <select
-                name=""
-                id=""
-                className="w-full py-2 text-sm focus:outline-none"
-              >
-                <option value="">Select Term</option>
-                <option value="term1">Term 1</option>
-                <option value="term2">Term 2</option>
-              </select>
-            </div>
-            <div className=" col-span-3 p-2 flex items-center">
-              <select
-                name=""
-                id=""
-                className="w-full py-2 text-sm focus:outline-none"
-              >
-                <option value="">Select Year</option>
-                <option value="2023/2024">2023/2024</option>
-                <option value="2024/2024">2024/2025</option>
-                <option value="2025/2026">2025/2026</option>
-              </select>
-            </div>
-            <div className=" col-span-3 p-2 flex items-center">
-              <button className="flex items-center gap-3 justify-center w-full px-10 py-2 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-non">
-                <FadersHorizontal size={32} color="#1a1919" weight="light" />{" "}
-                Filter
-              </button>
-            </div>
-          </div>
-          <div className="py-8">
-            <Barchart />
-          </div>
-          <div className="grid grid-cols-12 py-10">
-            <div className="col-span-6">
-              <h3 className="text-lg font-medium text-slate-700">
-                Upcoming Events
-              </h3>
-              <div className="mt-2">
-                <div className="flex gap-5 items-center border-b-2 border-slate-300 py-3">
-                  <div className="p-3 bg-blue-300 rounded-sm w-20 h-20 flex flex-col justify-center items-center ">
-                    <p className="text-xl font-bold">8</p>
-                    <p className="text-lg">Jan</p>
+              {/* <!-- Card --> */}
+              <div class="flex flex-col bg-white border shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-800">
+                <div class="p-4 md:p-5 flex justify-between gap-x-3">
+                  <div>
+                    <p class="text-xs uppercase tracking-wide text-gray-500">
+                      Sessions
+                    </p>
+                    <div class="mt-1 flex items-center gap-x-2 pt-2">
+                      <h3 class="mt-1 text-lg font-medium text-gray-800 dark:text-gray-200">
+                        27
+                      </h3>
+                    </div>
                   </div>
-                  <p>School reopen for the second term</p>
+                  <div class="flex-shrink-0 flex justify-center items-center w-[46px] h-[46px] bg-blue-600 text-white rounded-full dark:bg-blue-900 dark:text-blue-200">
+                    <svg
+                      class="flex-shrink-0 w-5 h-5"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M5 22h14" />
+                      <path d="M5 2h14" />
+                      <path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22" />
+                      <path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2" />
+                    </svg>
+                  </div>
                 </div>
               </div>
-              <div className="mt-2">
-                <div className="flex gap-5 items-center border-b-2 border-slate-300 py-3">
-                  <div className="p-3 bg-blue-300 rounded-sm w-20 h-20 flex flex-col justify-center items-center ">
-                    <p className="text-xl font-bold">16</p>
-                    <p className="text-lg">Mar</p>
+              {/* <!-- End Card --> */}
+
+              {/* <!-- Card --> */}
+              <div class="flex flex-col bg-white border shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-800">
+                <div class="p-4 md:p-5 flex justify-between gap-x-3">
+                  <div>
+                    <p class="text-xs uppercase tracking-wide text-gray-500">
+                      Class level
+                    </p>
+                    <div class="mt-1 flex items-center gap-x-2 pt-2">
+                      <h3 class="text-lg sm:text-lg font-medium text-gray-800 dark:text-gray-200">
+                        Form 4B
+                      </h3>
+                    </div>
                   </div>
-                  <p>Mock exermination IGCSE & A Level</p>
+                  <div class="flex-shrink-0 flex justify-center items-center w-[46px] h-[46px] bg-blue-600 text-white rounded-full dark:bg-blue-900 dark:text-blue-200">
+                    <svg
+                      class="flex-shrink-0 w-5 h-5"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M21 11V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h6" />
+                      <path d="m12 12 4 10 1.7-4.3L22 16Z" />
+                    </svg>
+                  </div>
                 </div>
               </div>
+              {/* <!-- End Card --> */}
             </div>
-            <div className="col-span-6"></div>
           </div>
+
+          {/* end here */}
         </div>
       </div>
     </section>

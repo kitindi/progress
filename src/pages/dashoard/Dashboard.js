@@ -6,9 +6,9 @@ const Dashboard = () => {
   return (
     <section className="w-full h-full bg-gray-50">
       <Navbar />
-      <div className="max-w-7xl mx-auto  grid grid-cols-12 ">
+      <div className="max-w-8xl mx-auto  grid grid-cols-12 ">
         <SideNav />
-        <div className="col-span-10 px-10">
+        <div className="col-span-10 px-20">
           {/* start here */}
           {/* <!-- Card Section --> */}
           <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-10 mx-auto">
