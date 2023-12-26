@@ -3,7 +3,7 @@ import user from "../../images/user.svg";
 
 const Navbar = () => {
   return (
-    <nav className="w-full  border-b border-gray-300">
+    <nav className="w-full  border-b border-gray-200">
       <div className="max-w-7xl mx-auto h-30 grid grid-cols-12 ">
         <div className="col-span-2  px-10  pt-10 pb-4">
           <svg
