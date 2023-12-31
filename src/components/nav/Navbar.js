@@ -22,7 +22,7 @@ const Navbar = () => {
             />
           </svg>
         </div>
-        <div className="col-span-10  pl-10 pr-20 flex justify-between items-center  pt-5">
+        <div className="col-span-10  px-10 flex justify-between items-center  pt-5">
           <p>Subject</p>
           <div className="flex items-center gap-8">
             <p>Username</p>{" "}

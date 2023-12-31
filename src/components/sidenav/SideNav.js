@@ -112,7 +112,7 @@ const SideNav = () => {
               <path d="M16 18h.01" />
             </svg>
           </span>
-          Calendar
+          Schedule
         </Link>
         <Link
           to="/planner"

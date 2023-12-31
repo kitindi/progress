@@ -9,27 +9,19 @@ const Gradebook = () => {
   const [create, setCreate] = useState(false);
   // create a new student states
 
-  const [firstName, setFirstName] = useState(null);
-  const [lastName, setLastName] = useState(null);
-  const [gender, setGender] = useState(null);
-  const [level, setLevel] = useState(null);
-  const [email, setEmail] = useState(null);
-  const [phone, setPhone] = useState(null);
+  const [testOne, setTestOne] = useState(null);
+  const [testTwo, setTestTwo] = useState(null);
+  const [testThree, setTestThree] = useState(null);
+  const [semester, setSemester] = useState(null);
+  const [year, setYear] = useState(null);
 
   // function to handle created data
 
-  const createStudent = (e) => {
+  const createRecord = (e) => {
     e.preventDefault();
-    const newStudent = {
-      id: uuidv4(),
-      firstName,
-      lastName,
-      email,
-      phone,
-      gender,
-    };
+    const scores = {};
 
-    console.log(newStudent);
+    console.log(scores);
     createModel();
   };
 
@@ -297,7 +289,7 @@ const Gradebook = () => {
                   {/* <!-- Modal header --> */}
                   <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
                     <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                      Update student
+                      Update performance records
                     </h3>
                     <button
                       type="button"
@@ -328,99 +320,85 @@ const Gradebook = () => {
                     <div class="grid grid-cols-6 gap-6">
                       <div class="col-span-6 sm:col-span-3">
                         <label
-                          for="first-name"
+                          for="testOne"
                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                         >
-                          First Name
+                          Test One score / Project
                         </label>
                         <input
-                          type="text"
-                          name="first-name"
-                          id="first-name"
+                          type="number"
+                          name="testOne"
+                          id="testOne"
                           class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                          placeholder="Bonnie"
+                          min="0"
+                          max="100"
+                          placeholder=""
                           required=""
                         />
                       </div>
                       <div class="col-span-6 sm:col-span-3">
                         <label
-                          for="last-name"
+                          for="testTwo"
                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                         >
-                          Last Name
+                          Test Two score
                         </label>
                         <input
-                          type="text"
-                          name="last-name"
-                          id="last-name"
+                          type="number"
+                          name="testTwo"
+                          id="testTwo"
                           class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                          placeholder="Green"
+                          min="0"
+                          max="100"
+                          placeholder=""
                           required=""
                         />
                       </div>
                       <div class="col-span-6 sm:col-span-3">
                         <label
-                          for="gender"
+                          for="testThree"
                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                         >
-                          Gender
+                          Test Three score
                         </label>
                         <input
-                          type="text"
-                          name="gender"
-                          id="gender"
+                          type="number"
+                          name="testThree"
+                          id="testThree"
                           class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                          placeholder="Male or Female"
+                          min="0"
+                          max="100"
+                          placeholder=""
                           required=""
                         />
                       </div>
-                      <div class="col-span-6 sm:col-span-3">
-                        <label
-                          for="class"
-                          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >
-                          Class
-                        </label>
-                        <input
-                          type="text"
-                          name="class"
-                          id="phone-number"
-                          class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                          placeholder="Form 4B"
-                          required=""
-                        />
-                      </div>
-                      <div class="col-span-6 sm:col-span-3">
-                        <label
-                          for="email"
-                          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >
-                          Email
-                        </label>
-                        <input
-                          type="email"
-                          name="email"
-                          id="email"
-                          class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                          placeholder="scot@gmail.com"
-                          required=""
-                        />
-                      </div>
-                      <div class="col-span-6 sm:col-span-3">
-                        <label
-                          for="Phone"
-                          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >
-                          Phone Number
-                        </label>
-                        <input
-                          type="text"
-                          name="phone"
-                          id="phone"
-                          class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                          placeholder="+255 764 282 222"
-                          required=""
-                        />
+                      <div class="col-span-6 sm:col-span-3 flex items-center gap-3">
+                        <div>
+                          <label
+                            for="semester"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                          >
+                            Semester
+                          </label>
+                          <select class="py-2 px-3 pe-9 block w-full sm:w-auto border border-gray-300 shadow-sm -mt-px -ms-px first:rounded-t-lg last:rounded-b-lg sm:first:rounded-s-lg sm:mt-0 sm:first:ms-0 sm:first:rounded-se-none sm:last:rounded-es-none sm:last:rounded-e-lg text-sm relative focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600">
+                            <option>Select Term</option>
+                            <option value="termOne">Term One</option>
+                            <option value="termTwo">Term Two</option>
+                          </select>
+                        </div>
+                        <div>
+                          <label
+                            for="class"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                          >
+                            Academic Year
+                          </label>
+                          <select class="py-2 px-3 pe-9 block w-full sm:w-auto border border-gray-300 shadow-sm -mt-px -ms-px first:rounded-t-lg last:rounded-b-lg sm:first:rounded-s-lg sm:mt-0 sm:first:ms-0 sm:first:rounded-se-none sm:last:rounded-es-none sm:last:rounded-e-lg text-sm relative focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600">
+                            <option>Select Year</option>
+                            <option value="2023/2024">2023/2024</option>
+                            <option value="2024/2025">2024/2025</option>
+                          </select>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -429,6 +407,7 @@ const Gradebook = () => {
                     <button
                       type="submit"
                       class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                      onClick={() => setShow(!show)}
                     >
                       Update
                     </button>
@@ -456,7 +435,7 @@ const Gradebook = () => {
             {/* <!-- Modal header --> */}
             <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
               <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                Create Student
+                Add Performance records
               </h3>
               <button
                 type="button"
@@ -487,111 +466,85 @@ const Gradebook = () => {
               <div class="grid grid-cols-6 gap-6">
                 <div class="col-span-6 sm:col-span-3">
                   <label
-                    for="first-name"
+                    for="testOne"
                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                   >
-                    First Name
+                    Test One score / Project
                   </label>
                   <input
-                    type="text"
-                    name="first-name"
-                    value={firstName}
-                    onChange={(e) => setFirstName(e.target.value)}
-                    id="first-name"
+                    type="number"
+                    name="testOne"
+                    id="testOne"
                     class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Bonnie"
+                    min="0"
+                    max="100"
+                    placeholder=""
                     required=""
                   />
                 </div>
                 <div class="col-span-6 sm:col-span-3">
                   <label
-                    for="last-name"
+                    for="testTwo"
                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                   >
-                    Last Name
+                    Test Two score
                   </label>
                   <input
-                    type="text"
-                    name="last-name"
-                    id="last-name"
-                    value={lastName}
-                    onChange={(e) => setLastName(e.target.value)}
+                    type="number"
+                    name="testTwo"
+                    id="testTwo"
                     class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Green"
+                    min="0"
+                    max="100"
+                    placeholder=""
                     required=""
                   />
                 </div>
                 <div class="col-span-6 sm:col-span-3">
                   <label
-                    for="gender"
+                    for="testThree"
                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                   >
-                    Gender
+                    Test Three score
                   </label>
                   <input
-                    type="text"
-                    name="gender"
-                    value={gender}
-                    onChange={(e) => setGender(e.target.value)}
-                    id="gender"
+                    type="number"
+                    name="testThree"
+                    id="testThree"
                     class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Male or Female"
+                    min="0"
+                    max="100"
+                    placeholder=""
                     required=""
                   />
                 </div>
-                <div class="col-span-6 sm:col-span-3">
-                  <label
-                    for="class"
-                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                  >
-                    Class
-                  </label>
-                  <input
-                    type="text"
-                    name="class"
-                    value={level}
-                    onChange={(e) => setLevel(e.target.value)}
-                    id="phone-number"
-                    class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Form 4B"
-                    required=""
-                  />
-                </div>
-                <div class="col-span-6 sm:col-span-3">
-                  <label
-                    for="email"
-                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    id="email"
-                    class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="scot@gmail.com"
-                    required=""
-                  />
-                </div>
-                <div class="col-span-6 sm:col-span-3">
-                  <label
-                    for="Phone"
-                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                  >
-                    Phone Number
-                  </label>
-                  <input
-                    type="text"
-                    name="phone"
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
-                    id="phone"
-                    class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="+255 764 282 222"
-                    required=""
-                  />
+                <div class="col-span-6 sm:col-span-3 flex items-center gap-3">
+                  <div>
+                    <label
+                      for="semster"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      Semister
+                    </label>
+                    <select class="py-2 px-3 pe-9 block w-full sm:w-auto border border-gray-300 shadow-sm -mt-px -ms-px first:rounded-t-lg last:rounded-b-lg sm:first:rounded-s-lg sm:mt-0 sm:first:ms-0 sm:first:rounded-se-none sm:last:rounded-es-none sm:last:rounded-e-lg text-sm relative focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600">
+                      <option>Select Term</option>
+                      <option value="termOne">Term One</option>
+                      <option value="termTwo">Term Two</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label
+                      for="acadmeicYear"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      Academic Year
+                    </label>
+                    <select class="py-2 px-3 pe-9 block w-full sm:w-auto border border-gray-300 shadow-sm -mt-px -ms-px first:rounded-t-lg last:rounded-b-lg sm:first:rounded-s-lg sm:mt-0 sm:first:ms-0 sm:first:rounded-se-none sm:last:rounded-es-none sm:last:rounded-e-lg text-sm relative focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600">
+                      <option>Select Year</option>
+                      <option value="2023/2024">2023/2024</option>
+                      <option value="2024/2025">2024/2025</option>
+                    </select>
+                  </div>
                 </div>
               </div>
             </div>
@@ -599,10 +552,10 @@ const Gradebook = () => {
             <div class="flex items-center p-6 space-x-3 rtl:space-x-reverse border-t border-gray-200 rounded-b dark:border-gray-600">
               <button
                 type="submit"
-                onClick={createStudent}
                 class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                onClick={() => setCreate(!create)}
               >
-                Save
+                Add record
               </button>
             </div>
           </form>
