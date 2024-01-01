@@ -79,7 +79,7 @@ const SideNav = () => {
           Grade Book
         </Link>
 
-        <Link
+        {/* <Link
           to="/calendar"
           className={`${
             location.pathname === "/calendar"
@@ -140,7 +140,7 @@ const SideNav = () => {
             </svg>
           </span>
           Lesson plan
-        </Link>
+        </Link> */}
       </ul>
       <div>
         <Link
