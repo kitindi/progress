@@ -6,7 +6,7 @@ const SideNav = () => {
   const location = useLocation();
   console.log(location.pathname);
   return (
-    <div className="col-span-2  pl-10 border-r border-gray-200 flex flex-col gap-60">
+    <div className="col-span-2  pl-10 border-r border-gray-200 flex flex-col gap-60 min-h-screen">
       <ul className="mt-10 flex flex-col gap-6">
         <Link
           to="/dashboard"
