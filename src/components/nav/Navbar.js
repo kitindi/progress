@@ -1,8 +1,13 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [show, setSHow] = useState(false);
+
+  const changeView = () => {
+    navigate("/");
+  };
   return (
     <nav className="w-full  border-b border-gray-200">
       <nav class="bg-gray-100">
@@ -93,11 +98,14 @@ const Navbar = () => {
                   >
                     {/* <!-- Active: "bg-gray-100", Not Active: "" --> */}
                     <Link
-                      to="#"
+                      to="/profile"
                       class="block px-4 py-2 text-sm text-gray-700"
                       role="menuitem"
                       tabindex="-1"
                       id="user-menu-item-0"
+                      onClick={() => {
+                        setSHow(!show);
+                      }}
                     >
                       Your Profile
                     </Link>
@@ -107,6 +115,9 @@ const Navbar = () => {
                       role="menuitem"
                       tabindex="-1"
                       id="user-menu-item-1"
+                      onClick={() => {
+                        setSHow(!show);
+                      }}
                     >
                       Settings
                     </Link>
@@ -116,6 +127,9 @@ const Navbar = () => {
                       role="menuitem"
                       tabindex="-1"
                       id="user-menu-item-2"
+                      onClick={() => {
+                        setSHow(!show);
+                      }}
                     >
                       Sign out
                     </Link>

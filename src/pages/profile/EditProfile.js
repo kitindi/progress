@@ -3,7 +3,7 @@ import Navbar from "../../components/nav/Navbar";
 import SideNav from "../../components/sidenav/SideNav";
 import { UserCircle } from "@phosphor-icons/react";
 
-const Onboarding = () => {
+const Editprofile = () => {
   const navigate = useNavigate();
 
   const handleProfile = () => {
@@ -15,20 +15,15 @@ const Onboarding = () => {
       <div className="max-w-8xl mx-auto  grid grid-cols-12">
         <SideNav />
         <div className="col-span-10 px-10 py-5">
-          <div className="mb-3">
-            <h3 className="text-base text-center  text-gray-800 font-medium">
-              Welcome on Board 🎉
-            </h3>
-          </div>
-          <div className="w-full bg-gray-50  rounded-md">
+          <div className="w-full bg-gray-50  rounded-md py-5">
             {/* start here */}
             {/* <!-- Card Section --> */}
             <div class="max-w-4xl px-2 py-3 sm:px-10 sm:py-5 mx-auto">
               {/* <!-- Card --> */}
               <div class="bg-white rounded-xl shadow p-4 sm:p-7 dark:bg-slate-900">
                 <div class="mb-8">
-                  <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200">
-                    Profile
+                  <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-5">
+                    Update Profile
                   </h2>
                   <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
                     Setup your profile .
@@ -270,7 +265,7 @@ const Onboarding = () => {
                       class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                       onClick={handleProfile}
                     >
-                      Save changes
+                      Update
                     </button>
                   </div>
                 </form>
@@ -286,4 +281,4 @@ const Onboarding = () => {
   );
 };
 
-export default Onboarding;
+export default Editprofile;

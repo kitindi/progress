@@ -9,6 +9,7 @@ import Students from "./pages/students/Students";
 import Calendar from "./pages/calender/Calendar";
 
 import Planner from "./pages/planner/Planner";
+import Editprofile from "./pages/profile/EditProfile";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/onboard" element={<Onboarding />} />
+          <Route path="/profile" element={<Editprofile />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/gradebook" element={<Gradebook />} />
           <Route path="/students" element={<Students />} />
