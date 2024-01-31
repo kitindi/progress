@@ -9,6 +9,7 @@ const Students = () => {
   const [create, setCreate] = useState(false);
   // create a new student states
 
+  const [students, setStudents] = useState([]);
   const [firstName, setFirstName] = useState(null);
   const [lastName, setLastName] = useState(null);
   const [gender, setGender] = useState(null);
@@ -29,7 +30,8 @@ const Students = () => {
       gender,
     };
 
-    console.log(newStudent);
+    setStudents((student) => [...student, newStudent]);
+    console.log(students);
     createModel();
   };
 

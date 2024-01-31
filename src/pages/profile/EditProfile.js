@@ -45,7 +45,7 @@ const Editprofile = () => {
                         <UserCircle size={42} color="#b9c0c0" />
                         <div class="flex gap-x-2">
                           <div>
-                            <button
+                            {/* <button
                               type="button"
                               class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                             >
@@ -66,7 +66,11 @@ const Editprofile = () => {
                                 <line x1="12" x2="12" y1="3" y2="15" />
                               </svg>
                               Upload photo
-                            </button>
+                            </button> */}
+                            <input
+                              type="file"
+                              class="py-2 px-3 pe-11 block w-full border border-gray-300 shadow-sm -mt-px -ms-px first:rounded-t-lg last:rounded-b-lg sm:first:rounded-s-lg sm:mt-0 sm:first:ms-0 sm:first:rounded-se-none sm:last:rounded-es-none sm:last:rounded-e-lg text-sm relative focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                            />
                           </div>
                         </div>
                       </div>
@@ -121,24 +125,6 @@ const Editprofile = () => {
                     </div>
                     {/* <!-- End Col --> */}
 
-                    <div class="sm:col-span-3">
-                      <label
-                        for="af-account-email"
-                        class="inline-block text-sm text-gray-800 mt-2.5 dark:text-gray-200"
-                      >
-                        Email
-                      </label>
-                    </div>
-                    {/* <!-- End Col --> */}
-
-                    <div class="sm:col-span-9">
-                      <input
-                        id="af-account-email"
-                        type="email"
-                        class="py-2 px-3 pe-11 block w-full border border-gray-300 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
-                        placeholder="maria@site.com"
-                      />
-                    </div>
                     {/* <!-- End Col --> */}
 
                     <div class="sm:col-span-3">

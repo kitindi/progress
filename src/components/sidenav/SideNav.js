@@ -6,7 +6,7 @@ const SideNav = () => {
   const location = useLocation();
   console.log(location.pathname);
   return (
-    <div className="col-span-2  pl-10 border-r border-gray-200 flex flex-col gap-60 min-h-screen">
+    <div className="col-span-2  pl-10 border-r border-gray-200 flex flex-col gap-60 min-h-screen py-10">
       <ul className="mt-10 flex flex-col gap-6">
         <Link
           to="/dashboard"
@@ -142,14 +142,6 @@ const SideNav = () => {
           Lesson plan
         </Link> */}
       </ul>
-      <div>
-        <Link
-          to=""
-          className="text-base flex items-center gap-3 focus:text-blue-500"
-        >
-          <SignOut size={20} color="#1a1919" /> Logout
-        </Link>
-      </div>
     </div>
   );
 };
